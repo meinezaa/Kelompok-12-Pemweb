@@ -11,7 +11,7 @@
     <h3>Program Kerja UPN Mengajar</h3>
     <h4>UKM Penalaran dan Kreativitas</h4>
 
-    <form id="formVolunteer">
+    <form id="formVolunteer" onsubmit="return validasiForm()"></form>>
 
         <fieldset>
             <legend>Data Diri</legend>
@@ -70,7 +70,7 @@
 
             <p>
                 <label>Divisi yang Dipilih :</label><br>
-                <select id="divisi" required>
+                <select id="divisi1" required>
                     <option value="">-- Pilih Divisi 1 --</option>
                     <option>Pengajar</option>
                     <option>Acara</option>
@@ -80,7 +80,7 @@
                     <option>Perlengkapan</option>
                     <option>Keamanan</option>
                 </select>
-                <select id="divisi" required>
+                <select id="divisi2" required>
                     <option value="">-- Pilih Divisi 2 --</option>
                     <option>Pengajar</option>
                     <option>Acara</option>
@@ -106,7 +106,7 @@
         <button type="reset">Reset</button>
 
     </form>
-    
+
 <script src="script.js"></script>
 
 </body>
