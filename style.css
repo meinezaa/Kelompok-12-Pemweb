@@ -1,40 +1,37 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; /* Supaya ukuran elemen lebih mudah diatur */
+  box-sizing: border-box;
 }
 
+/* Background halaman */
 body {
-  font-family:
-    "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
-    Arial, sans-serif;
+  font-family: "Trebuchet MS", Arial, sans-serif;
   background-color: #f4f4f4;
-  display: flex; /* Supaya bisa ditaruh di tengah */
-  justify-content: center;
-  align-items: flex-start;
-  min-height: 100vh;
-  padding: 30px 0;
-}
-
-form {
-  background-color: white;
   padding: 30px;
-  border-radius: 10px;
-  width: 650px;
-  max-width: 95%;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-h2, h3, h4 {
+/* Judul */
+h2,
+h3,
+h4 {
   text-align: center;
   margin-bottom: 5px;
 }
 
+form {
+  max-width: 1000px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* kiri kanan */
+  gap: 20px;
+}
+
 fieldset {
   border: 1px solid #ccc;
+  border-radius: 10px;
   padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 8px;
+  background: #fff;
 }
 
 legend {
@@ -43,17 +40,16 @@ legend {
 }
 
 fieldset p {
-  display: grid;
-  grid-template-columns: 200px 1fr; /* kiri label | kanan input */
-  align-items: center;
-  margin-bottom: 12px;
+  margin-bottom: 15px;
 }
 
 label {
   font-weight: bold;
-  color: #333;
+  display: block;
+  margin-bottom: 5px;
 }
 
+/* Input */
 input,
 select,
 textarea {
@@ -61,9 +57,9 @@ textarea {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 6px;
-  font-size: 14px;
 }
 
+/* Fokus */
 input:focus,
 select:focus,
 textarea:focus {
@@ -71,15 +67,17 @@ textarea:focus {
   outline: none;
 }
 
+/* Textarea */
 textarea {
+  height: 90px;
   resize: none;
-  height: 80px;
 }
 
-form > button {
-  width: 48%;
+form button {
+  grid-column: span 2;
+  width: 200px;
+  margin: 10px auto;
   padding: 12px;
-  margin-top: 20px;
   background-color: #2e7d32;
   color: white;
   border: none;
@@ -88,15 +86,6 @@ form > button {
   cursor: pointer;
 }
 
-button:hover {
+form button:hover {
   background-color: #1b5e20;
 }
-
-form > button {
-  display: inline-block;
-}
-
-form {
-  text-align: center;
-}
-
